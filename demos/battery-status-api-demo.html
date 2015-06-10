@@ -81,8 +81,12 @@
             </ul>
          </div>
       </div>
-
-      <h3>Log</h3>
+	
+	<div style="width:300px;border:1px solid black; height:20px;"> 
+		<div id="barbar" style="width:200px;background-color:red; height:18px;"> </div> 
+	</div>
+	
+      <h3 style="margin-top:50px;">Log:</h3>
       <div id="log"></div>
       <button id="clear-log" class="button-demo">Clear log</button>
 
@@ -107,6 +111,10 @@
                document.getElementById('charging-time').innerHTML = battery.chargingTime;
                document.getElementById('discharging-time').innerHTML = battery.dischargingTime;
                document.getElementById('battery-level').innerHTML = battery.level;
+			   //document.getElementById('barbar').setAttribute("style", "width:"+ battery.level*100); 
+			  // document.getElementById('barbar').setAttribute("style", "background-color:green");
+			    document.getElementById('barbar').setAttribute("style", "height:20px;"+"background-color:green;"+"width:"+ battery.level*100+"px"); 
+			  
             }
 
             function addEvents(battery) {
